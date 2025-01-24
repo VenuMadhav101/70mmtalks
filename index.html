@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">70mmtalks</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Trending</li>
+                </ul>
+            </div>
+            <div class="hamburger-container">
+                <i class="fas fa-bars hamburger-icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <h1 class="movie-list-title">Latest</h1>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/f-1.jpg');">
+                <img class="featured-title" src="11.jpg" alt="">
+                <h3 class="movie-list-item-title">LYF:Love Your Father</h3>
+                <a href="?id=11">
+                    <button class="featured-button">More</button>
+                </a>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <!-- Movie items -->
+                        <div class="movie-list-item">
+                            <a href="?id=1">
+                                <img class="movie-list-item-img" src="1.jpg" alt="Movie 1">
+                                <h3 class="movie-list-item-title">Sankranthiki Vastunnam</h3>
+                            </a>
+                            <p>&#9733 7.0/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=2">
+                                <img class="movie-list-item-img" src="2.jpg" alt="Movie 2">
+                                <h3 class="movie-list-item-title">Daaku Maharaj</h3>
+                            </a>
+                            <p>&#9733 6.8/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=3">
+                                <img class="movie-list-item-img" src="3.jpg" alt="Movie 3">
+                                <h3 class="movie-list-item-title">Game Changer</h3>
+                            </a>
+                            <p>&#9733 6.6/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=4">
+                                <img class="movie-list-item-img" src="4.jpg" alt="Movie 4">
+                                <h3 class="movie-list-item-title">Marco</h3>
+                            </a>
+                            <p>&#9733 7.5/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=5">
+                                <img class="movie-list-item-img" src="5.jpg" alt="Movie 5">
+                                <h3 class="movie-list-item-title">Pushpa-2:The Rule</h3>
+                            </a>
+                            <p>&#9733 6.3</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=6">
+                                <img class="movie-list-item-img" src="6.jpg" alt="Movie 6">
+                                <h3 class="movie-list-item-title">Mechanic Rocky</h3>
+                            </a>
+                            <p>&#9733 6.9/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=7">
+                                <img class="movie-list-item-img" src="7.jpg" alt="Movie 7">
+                                <h3 class="movie-list-item-title">Lucky Bhaskar</h3>
+                            </a>
+                            <p>&#9733 8.0/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=8">
+                                <img class="movie-list-item-img" src="8.jpg" alt="Movie 8">
+                                <h3 class="movie-list-item-title">Ka</h3>
+                            </a>
+                            <p>&#9733 7.2/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=9">
+                                <img class="movie-list-item-img" src="9.jpg" alt="Movie 9">
+                                <h3 class="movie-list-item-title">Viswam </h3>
+                            </a>
+                            <p>&#9733 4.3/10</p>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="?id=10">
+                                <img class="movie-list-item-img" src="10.jpg" alt="Movie 10">
+                                <h3 class="movie-list-item-title">Devara</h3>                             
+                            </a>
+                            <p>&#9733 6.0/10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="movie-details-container" style="display: none;">
+        <div class="movie-poster">
+            <img id="movie-poster" src="" alt="Movie Poster">
+        </div>
+        <div class="movie-info">
+            <h1 id="movie-title">Movie Title</h1>
+            <p id="movie-duration">Duration: 120 mins</p>
+            <p id="movie-rating">Rating: 8.5</p>
+            <p id="movie-description">Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+        </div>
+    </div>
+    <script>
+        // Toggle menu visibility on hamburger icon click
+        document.querySelector('.hamburger-icon').addEventListener('click', () => {
+            document.querySelector('.menu-container').classList.toggle('show');
+        });
+
+        // Placeholder for actual movie data
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+        
+        const movies = {
+            1: {
+                poster: '1.jpg',
+                title: 'Sankranthiki Vasthunnam',
+                duration: '120 mins',
+                rating: '7',
+                description: "The film revolves around a light-hearted romantic drama, focusing on family dynamics, emotions, and how love and relationships unfold during a festive period, specifically around the Sankranti festival. It combines a mix of romance, drama, and comedy as the characters navigate their personal struggles and growth."
+            },
+            2: {
+                poster: '2.jpg',
+                title: 'Daaku Maharaj',
+                duration: '110 mins',
+                rating: '6.8',
+                description: "Daaku Maharaj is a drama film set in a rural backdrop and follows the story of a man who is caught up in a life of crime. The movie explores themes of honor, survival, and the complexities of rural life. It blends elements of action and drama, focusing on the struggles of the protagonist, who navigates through societal pressures, crime, and personal dilemmas. The film combines suspense, action, and emotional depth."
+            },
+            3: {
+                poster: '3.jpg',
+                title: 'Game Changer',
+                duration: '110 mins',
+                rating: '6.6',
+                description: "The story follows Ram Nandan, who becomes a district magistrate in Visakhapatnam, Andhra Pradesh. On his way to his new posting, he is attacked by a gang sent by a college rival involved in sand mining under the contract of the state's minister, Bobbili Mopidevi. Mopidevi aspires to be the Chief Minister but fears the position will go to his elder brother. As district magistrate, Ram Nandan confronts local wrongdoers, uncovering their involvement in narcotics under the guise of selling rice. "
+            },
+            4: {
+                poster: '4.jpg',
+                title: 'Marco',
+                duration: '145 mins',
+                rating: '7.5',
+                description: "Marco centers on gangster Marco D'Peter and the powerful Adat family, who dominate Kerala's gold mafia. The plot delves into Marco's brutal journey as he seeks vengeance against those responsible for attacks on his family, leading to a series of violent confrontations. "
+            },
+            5: {
+                poster: '5.jpg',
+                title: 'Pushpa 2: The Rule',
+                duration: '220 mins',
+                rating: '6.2',
+                description: "he sequel continues the story of Pushpa Raj, a laborer who rises through the ranks of red sandalwood smuggling. In this installment, Pushpa faces formidable adversaries, including SP Bhanwar Singh Shekhawat IPS, as he expands his empire and navigates complex political landscapes. "
+            },
+            6: {
+                poster: '6.jpg',
+                title: 'Mechanic Rocky',
+                duration: '156 mins',
+                rating: '6.9',
+                description: "The story follows Rakesh, a cheerful young mechanic who works at his family's ancestral garage. When a ruthless land grabber named Ranki Reddy attempts to seize the garage, Rakesh must confront him to protect his heritage. Along the way, Rakesh uncovers unexpected truths and navigates challenges involving cybercrime and personal relationships. "
+            },
+            7: {
+                poster: '7.jpg',
+                title: 'Lucky Bhaskar',
+                duration: '135 mins',
+                rating: '8.0',
+                description: 'Set in the late 1980s Mumbai, the story follows Bhaskar (Dulquer Salmaan), a dedicated bank employee who is denied a promotion despite his commitment to the job. Frustrated and struggling to support his family, Bhaskar becomes involved in financial scams, leading to a series of conflicts that might change his life forever. '
+            },
+            8: {
+                poster: '8.jpg',
+                title: 'Ka',
+                duration: '155 mins',
+                rating: '7.2',
+                description: 'The story follows a wildlife photographer, portrayed by Andrea Jeremiah, who becomes entangled in a perilous situation within a dense forest. As she navigates the dangers of the wild, she encounters Victor Mahadevan (Salim Ghouse), leading to a suspenseful and thrilling narrative.'
+            },
+            9: {
+                poster: '9.jpg',
+                title: 'Viswam',
+                duration: '150 mins',
+                rating: '4.3',
+                description: 'The story follows a wildlife photographer, portrayed by Andrea Jeremiah, who becomes entangled in a perilous situation within a dense forest. As she navigates the dangers of the wild, she encounters Victor Mahadevan (Salim Ghouse), leading to a suspenseful and thrilling narrative.'
+            },
+            10: {
+                poster: '10.jpg',
+                title: 'Devara',
+                duration: '175 mins',
+                rating: '6.0',
+                description: 'The plot follows Devara, the chieftain of a coastal village, who engages in a feud with his counterpart, Bhaira, over arms smuggling through the Red Sea. The story unfolds as a dramatized cautionary tale for a group of Bombay police officers in 1996, highlighting the challenges and conflicts faced by the community. '
+            },
+            11: {
+                poster: '11.jpg',
+                title: 'LYF:Love Your Father',
+                duration: '120 mins',
+                rating: '7.5',
+                description: 'Description for Movie 11'
+            },
+            // Add more movie data as needed
+        };
+
+        const movieDetails = movies[movieId];
+        if (movieDetails) {
+            document.querySelector('.content-container').style.display = 'none';
+            document.querySelector('.movie-details-container').style.display = 'block';
+            document.getElementById('movie-poster').src = movieDetails.poster;
+            document.getElementById('movie-title').textContent = movieDetails.title;
+            document.getElementById('movie-duration').textContent = `Duration: ${movieDetails.duration}`;
+            document.getElementById('movie-rating').textContent = `Rating: ${movieDetails.rating}`;
+            document.getElementById('movie-description').textContent = `Description: ${movieDetails.description}`;
+        }
+    </script>
+</body>
+</html>

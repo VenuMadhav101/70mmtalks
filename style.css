@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #151515;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-size: 24px;
+    color: #4dbf00;
+}
+
+.menu-container {
+    flex: 6;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item {
+    margin-right: 20px;
+}
+
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+.hamburger-container {
+    display: none;
+}
+
+.hamburger-icon {
+    font-size: 24px;
+    color: white;
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container {
+    margin: 0 10px;
+}
+
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s ease all;
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+    padding: 20px;
+}
+
+.content-container {
+    margin-left: 50px;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-title {
+    width: 100%;
+    max-width: 200px;
+}
+
+.featured-desc {
+    width: 100%;
+    max-width: 500px;
+    color: lightgray;
+    margin: 20px 0;
+}
+
+.featured-button {
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.movie-list-container {
+    margin-top: 20px;
+}
+
+.movie-list-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-list-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-list-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    flex: 0 0 calc(25% - 20px);
+}
+
+.movie-list-item-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-list-item-title {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.movie-list-item-desc {
+    font-size: 14px;
+    color: lightgray;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 10px;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .hamburger-container {
+        display: block;
+        cursor: pointer;
+    }
+
+    .profile-container {
+        display: none;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+
+    .left-menu-icon {
+        margin-bottom: 0;
+    }
+
+    .content-container {
+        margin-left: 0;
+    }
+
+    .featured-content {
+        height: auto;
+        padding: 10px;
+    }
+
+    .featured-title {
+        max-width: 100%;
+    }
+
+    .featured-desc {
+        max-width: 100%;
+    }
+
+    .movie-list-wrapper {
+        flex-direction: column;
+    }
+
+    .movie-list-item {
+        margin-bottom: 20px;
+        flex: 0 0 100%;
+    }
+}
+
+/* Show menu when toggled */
+.menu-container.show {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+}
+
+.menu-list.show {
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-list-item {
+    margin: 10px 0;
+}
